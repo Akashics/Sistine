@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistine Fibel</title>
+
+  <link rel="stylesheet" href="./assets/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-divider@2.0.1/dist/css/bulma-divider.min.css">
+  <link rel="stylesheet" href="./assets/css/light.css">
+  <link rel="stylesheet" href="./assets/css/dark.css">
+  <link rel="stylesheet" href="./assets/css/hover.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/button.css' />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/icon.css' />
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="tooltip"></div>
+  <section class="page" id="home-page">
+    <article>
+      <nav class="is-widescreen is-mobile" id="menu">
+        <style>
+          @media only screen and (max-width: 600px) {
+            .alert {
+              display: none !important;
+            }
+          }
+        </style>
+        <input type="checkbox" id="show-menu">
+        <label id="menu-trigger" for="show-menu">
+          <span class="menu-bar menu-bar-1 white"></span>
+          <span class="menu-bar menu-bar-2 white"></span>
+          <span class="menu-bar menu-bar-3 white"></span>
+        </label>
+        <div class="menu container">
+          <ul>
+            <li>
+              <a class="logo" id="home" href="/">
+                <p style="font-family: Buffalo; font-size: 250%">Sistine Fibel</p>
+            </li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a onclick="botlists()">Bot Lists</a>
+            </li>
+            <li>
+              <a href="https://gist.github.com/Kashalls/b5f1742fe092cde997464808c4eb20ed#file-credits-md">Credit</a>
+            </li>
+            <li>
+              <a href="https://discord.gg/6rJsFrv">Get Support Here</a>
+            </li>
+            <li>
+              <a href="https://sistine.moe/invite">Invite Sistine</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section>
+        <header>
+          <div class="container all-center has-text-centered">
+            <div class="column header">
+              <h1>
+                Level Up Your Discord Experience!
+              </h1>
+              <h2>
+                Get Sistine to bring new features to your Discord guild!
+              </h2>
+
+              <div class="menuButtons">
+                <a href="/dashboard">
+                  <button href="https://sistine.moe/" class="ui colorr button ">
+                    <i class="fab fa-discord"></i>
+                    Add to Discord
+                  </button>
+                </a>
+                <a href="/features">
+                  <button href="/features" class="ui colorr button">
+                    Find Out More!
+                  </button>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </header>
+      </section>
+        <section class="section has-text-white sec2">
+        <div class="container">
+          <div class="columns content">
+            <div class="column is-6">
+              <div class="section-title is-flex" style="max-width: 540px"><span>
+                  <h4>What is Sistine?</h4>
+                </span>
+              </div>
+              <p style="margin-bottom: 10px;">
+                Sistine was created back whenever when Kashall wanted to listen to weeb music whilist annoying his
+                friends. He doesn't do that anymore, but still likes to share his music, thus Sistine the Anime Bot was
+                born (with more features too!).
+              </p>
+              <p>
+                Sistine currently features a number of things not limited to High Quality Music, Auto & Self Role-ing,
+                Cute Animal Images, Image Generator Commands, Chuck Norris & Dad Jokes, Weird Memes, and Personal &
+                Guild Profiles and Leaderboards! There is always content being added, so join our community and listen
+                our update announcements!
+              </p>
+              <div class="section-title is-flex" style="max-width: 540px"><span>
+                  <h4>Looking To Support Sistine?</h4>
+                </span>
+              </div>
+              <div class="menuButtons">
+                  <a href="#upvote">
+                    <button href="#upvote" class="ui colorr button ">
+                        <i class="fas fa-chevron-up"></i>
+                      Upvote Sistine!
+                    </button>
+                  </a>
+                  <a href="https://www.patreon.com/Kashall">
+                    <button href="https://www.patreon.com/Kashall" class="ui colorr button">
+                      <i class="fab fa-patreon"></i>
+                      Join Patreon!
+                    </button>
+                  </a>
+                </div>
+            </div>
+            <div class="column is-6"><img alt="Customizable Features (WIP)" draggable="false" class="png" style="margin-bottom: 40px;"></div>
+          </div>
+        </div>
+        
+              <div class="is-divider"></div>
+
+        <div class="content">
+          <div class="container is-widescreen">
+            <div class="columns is-tablet is-centered">
+              <div class="column is-one-half">
+                <div id="commandUsage"></div>
+              </div>
+              <div class="column is-one-half">
+                <div id="commandUsage2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+              <div class="is-divider"></div>
+
+        <div class="content is-widescreen" id="commands">
+            <h1 style="color: #FFF; text-align: center; padding-top: 20px">Sistine's Commands</h1>
+
+          
+<div class="category"><h2 class="category-header">Auto Role / 2 Commands</h2><div class="subcategory"><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;autorole</td><td>addautorole, removeautorole, removeautoroles, deleteautorole, deleteautoroles</td><td>Allows Administrators and above to add new Auto Roles.</td></tr>
+<tr><td>s&gt;toggleautoroles</td><td>toggleautorole, enableautoroles, disableautoroles</td><td>Allows Administrators and above to enable or disable Auto Roles.</td></tr></tbody></table></div></div><div class="category"><h2 class="category-header">Assignable Roles / 3 Commands</h2><div class="subcategory"><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;managerole</td><td>addselfrole, addselfroles, removeselfrole, removeselfroles, manageroles</td><td>Add or Remove Self Roles from the server.</td></tr>
+<tr><td>s&gt;roleme</td><td>selfrole, iam</td><td>Assign or Deassign or list Self Roles from Yourself.</td></tr>
+<tr><td>s&gt;toggleroles</td><td>toggleselfrole, enableselfroles, disableselfroles</td><td>Enable/Disable Self Roles on the server.</td></tr></tbody></table></div></div><div class="category"><h2 class="category-header">Configuration / 1 Commands</h2><div class="subcategory"><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;prefix</td><td>setPrefix</td><td>Change the command prefix the bot uses in your server.</td></tr></tbody></table></div></div><div class="category"><h2 class="category-header">Developer / 1 Commands</h2><div class="subcategory"><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;conf</td><td></td><td>Define per-guild settings.</td></tr></tbody></table></div></div><div class="category"><h2 class="category-header">Image Generation / 34 Commands</h2><div class="subcategory"><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;achievement</td><td></td><td>Creates an image based achievement</td></tr>
+<tr><td>s&gt;approved</td><td></td><td>Show off your stamp of approval.</td></tr>
+<tr><td>s&gt;batslap</td><td></td><td>Slap another user as Batman.</td></tr>
+<tr><td>s&gt;beautiful</td><td>beautify</td><td>Admire your or someone else&#039;s avatar.</td></tr>
+<tr><td>s&gt;blame</td><td></td><td>Assign the blame to another user thru a canvas based api</td></tr>
+<tr><td>s&gt;bobross</td><td></td><td>Paint a happy little accident.</td></tr>
+<tr><td>s&gt;challenger</td><td></td><td>A new challenger has appeared.</td></tr>
+<tr><td>s&gt;confused</td><td></td><td>Show someone how confused you are.</td></tr>
+<tr><td>s&gt;crush</td><td></td><td>Admire your or someone else&#039;s avatar.</td></tr>
+<tr><td>s&gt;facepalm</td><td>facep</td><td>Some people might really get you the point to Facepalm, this does exactly that..</td></tr>
+<tr><td>s&gt;fanslap</td><td></td><td>Slap another user for their idiocy with a paper fan.</td></tr>
+<tr><td>s&gt;garbage</td><td></td><td>Get thrown out with the trash</td></tr>
+<tr><td>s&gt;heavyfear</td><td></td><td>Fear nothing... but that thing.</td></tr>
+<tr><td>s&gt;karen</td><td></td><td>Look what Karen has.</td></tr>
+<tr><td>s&gt;missing</td><td></td><td>Post a missing persons poster of a user.</td></tr>
+<tr><td>s&gt;painting</td><td></td><td>Display a valuable, but deadly painting.</td></tr>
+<tr><td>s&gt;pls</td><td></td><td>Ask nicely!</td></tr>
+<tr><td>s&gt;rainbow</td><td></td><td>Show off your rainbow.</td></tr>
+<tr><td>s&gt;rejected</td><td>reject</td><td>Reject someone.</td></tr>
+<tr><td>s&gt;respect</td><td></td><td>Pay respects to someone.</td></tr>
+<tr><td>s&gt;snapchat</td><td></td><td>Creates a snapchat based meme.</td></tr>
+<tr><td>s&gt;steam</td><td>steamcard, steamtradingcard</td><td>Create a steam trading card.</td></tr>
+<tr><td>s&gt;stepped</td><td></td><td>Post a stepped picture of a user.</td></tr>
+<tr><td>s&gt;suggestionbox</td><td></td><td>Creates a meme based on a webcomic.</td></tr>
+<tr><td>s&gt;superpunch</td><td></td><td>Punch someone as Superman.</td></tr>
+<tr><td>s&gt;superspank</td><td></td><td>Spank someone as Superman.</td></tr>
+<tr><td>s&gt;tattoo</td><td></td><td>Adds a tattoo to a mentioned user&#039;s arm</td></tr>
+<tr><td>s&gt;thesearch</td><td></td><td>Creates a meme based on a webcomic.</td></tr>
+<tr><td>s&gt;thumbsup</td><td>vault, vaultboy</td><td>Give a thumbs up as another user.</td></tr>
+<tr><td>s&gt;tinder</td><td></td><td>tinderMatch</td></tr>
+<tr><td>s&gt;triggered</td><td></td><td>Trigger someone...</td></tr>
+<tr><td>s&gt;waifu</td><td></td><td>Rate someone</td></tr>
+<tr><td>s&gt;wanted</td><td></td><td>Post a wanted picture of a user.</td></tr>
+<tr><td>s&gt;wreckit</td><td></td><td>Based on the Wreck It Ralph 2 meme.</td></tr></tbody></table></div></div><div class="category"><h2 class="category-header">Music / 14 Commands</h2><div class="subcategory"><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;dmsong</td><td>savesong, dmcurrentsong</td><td>Sends you the current song in your DMs.</td></tr>
+<tr><td>s&gt;dump</td><td>dumpplaylist, savesongs, save</td><td>Dump your server queue in raw format to be used later!</td></tr>
+<tr><td>s&gt;loop</td><td>loopsong, repeat, ripeti, répéte, repite</td><td>Loop a song so it repeats when it finishes playing.</td></tr>
+<tr><td>s&gt;lyrics</td><td>songlyrics, lyric</td><td>Get a song&#039;s lyrics.</td></tr>
+<tr><td>s&gt;music</td><td>np, currentsong, song</td><td>Detailed information for all Music Commands.</td></tr>
+<tr><td>s&gt;nowplaying</td><td>np, currentsong, song, canzone, chanson, canción, lied</td><td>Know which song is currently playing and what is it&#039;s progress.</td></tr>
+<tr><td>s&gt;play</td><td>musicplay, suona, accoda, joue, toca, spielt</td><td>Play Songs from YouTube/Twitch/SoundCloud/Mixer/Live Streams, etc.</td></tr>
+<tr><td>s&gt;queue</td><td>stopmusic, leave</td><td>See the current song queue in an interactive manner</td></tr>
+<tr><td>s&gt;shuffle</td><td>shufflequeue, queueshuffle</td><td>Shuffle songs in the queue to be randomized.</td></tr>
+<tr><td>s&gt;skip</td><td>loopsong, repeat</td><td>Skip the current song or call a vote skip if there are more than 3 members in the VC.</td></tr>
+<tr><td>s&gt;stop</td><td>forceleave, leave, stopmusic, musicstop, stop</td><td>Make Pengu forcefully leave your Voice Channel.</td></tr>
+<tr><td>s&gt;toggledj</td><td>djonly, enabledjonly, disabledjonly</td><td>Toggle DJ only mode for Music Commands.</td></tr>
+<tr><td>s&gt;togglepause</td><td>pause, resume</td><td>Pause/Resume the currently playing music.</td></tr>
+<tr><td>s&gt;volume</td><td>changevol, setvolume</td><td>Change the default volume of music in your guild</td></tr></tbody></table></div></div><div class="category"><h2 class="category-header">NSFW / 14 Commands</h2><div class="subcategory"><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;amateur</td><td>amateurnsfw</td><td>-NOT SAFE FOR WORK- Ameteur Images.</td></tr>
+<tr><td>s&gt;anal</td><td></td><td>-NOT SAFE FOR WORK- Anal images.</td></tr>
+<tr><td>s&gt;boobs</td><td>boobies</td><td>-NOT SAFE FOR WORK- Boobs images.</td></tr>
+<tr><td>s&gt;booty</td><td>ass, booties, butt</td><td>-NOT SAFE FOR WORK- Booty images.</td></tr>
+<tr><td>s&gt;eighteen</td><td></td><td>-NOT SAFE FOR WORK- Teen images.</td></tr>
+<tr><td>s&gt;gifs</td><td>nsfwgif</td><td>-NOT SAFE FOR WORK- Animated Gifs.</td></tr>
+<tr><td>s&gt;gonewild</td><td>gwnsfw</td><td>-NOT SAFE FOR WORK- Gone Wild Images.</td></tr>
+<tr><td>s&gt;hentai</td><td>boobies</td><td>-NOT SAFE FOR WORK- Boobs images.</td></tr>
+<tr><td>s&gt;lesbian</td><td>lesbians</td><td>-NOT SAFE FOR WORK- Lesbian Images.</td></tr>
+<tr><td>s&gt;milfs</td><td>milf</td><td>-NOT SAFE FOR WORK- MILF images.</td></tr>
+<tr><td>s&gt;nekos</td><td>neko, nsfwneko, nsfwnekos</td><td>-NOT SAFE FOR WORK- Nekos Images.</td></tr>
+<tr><td>s&gt;nsfwsnapchat</td><td></td><td>-NOT SAFE FOR WORK- Snapchat Images.</td></tr>
+<tr><td>s&gt;pussy</td><td>pussies</td><td>-NOT SAFE FOR WORK- Pussy images.</td></tr>
+<tr><td>s&gt;urban</td><td></td><td>Define a word from the URBAN DICTIONARY.</td></tr></tbody></table></div></div><div class="category"><h2 class="category-header">Pictures of Animals / 7 Commands</h2><div class="subcategory"><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;bird</td><td>birb</td><td>Fetch one of those fancy birbs flying around there.</td></tr>
+<tr><td>s&gt;cat</td><td>randomcat, catto</td><td>Meow. Its french for &quot;I&#039;m hungry again&quot;</td></tr>
+<tr><td>s&gt;dog</td><td>randomdog, doggo</td><td>Based on the popular song that goes &quot;Who let the dogs out.&quot;</td></tr>
+<tr><td>s&gt;duck</td><td></td><td>The duck walked up to the guy running the stand. Hey! Got any grapes?</td></tr>
+<tr><td>s&gt;fox</td><td></td><td>No one really knows what the fox said.</td></tr>
+<tr><td>s&gt;owl</td><td></td><td>For Safety: You should see the &quot;hoot&quot; command&#039;s description.</td></tr>
+<tr><td>s&gt;shiba</td><td></td><td>&quot;Borrow&quot; a picture of a random shiba.</td></tr></tbody></table></div></div><div class="category"><h2 class="category-header">Response / 5 Commands</h2><div class="subcategory"><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;chucknorris</td><td></td><td>Tells a Chuck Norris Joke.</td></tr>
+<tr><td>s&gt;joke</td><td>dad</td><td>Tells you a terrible joke.</td></tr>
+<tr><td>s&gt;meme</td><td></td><td>Just meme my life away...</td></tr>
+<tr><td>s&gt;why</td><td></td><td>Why? Why not? Because you can.</td></tr>
+<tr><td>s&gt;yomomma</td><td>yomommasofat, yomommajoke</td><td>Yo Mamma&#039;s So Fat, this joke doesnt even fi</td></tr></tbody></table></div></div><div class="category"><div class="subcategory"><h3 class="subcategory-header">Image Reponsive</h3><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;button</td><td></td><td>Create and SMASH that button!</td></tr>
+<tr><td>s&gt;cuddle</td><td></td><td>Who wants to cuddle with me?!?!</td></tr>
+<tr><td>s&gt;handsigns</td><td></td><td>9/10 people say Sign Language is Handy</td></tr>
+<tr><td>s&gt;hug</td><td></td><td>Free Hugs!</td></tr>
+<tr><td>s&gt;illegal</td><td>sign</td><td>Wait! That&#039;s Illegal!</td></tr>
+<tr><td>s&gt;kiss</td><td></td><td>An Anime Thing Kisses Another Thing</td></tr>
+<tr><td>s&gt;loveship</td><td>ship</td><td>Used for generating love ships.</td></tr>
+<tr><td>s&gt;moe</td><td>weebsh</td><td>Lots of Moe.</td></tr>
+<tr><td>s&gt;pat</td><td></td><td>Everyone needs a head-pat sometime. Right?</td></tr>
+<tr><td>s&gt;poke</td><td></td><td>Poke someone. DO IT.</td></tr>
+<tr><td>s&gt;ribbon</td><td></td><td>Make some &quot;Bricky&quot; text!</td></tr>
+<tr><td>s&gt;slap</td><td></td><td>Responds with some anime person slapping your choice of person</td></tr></tbody></table></div><div class="subcategory"><h3 class="subcategory-header">Text-Based</h3><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;banner</td><td>ascii</td><td>Giant TexT Banner</td></tr>
+<tr><td>s&gt;binary</td><td></td><td>01101000 01100101 01101100 01110000</td></tr>
+<tr><td>s&gt;brix</td><td></td><td>Make some &quot;Bricky&quot; text!</td></tr>
+<tr><td>s&gt;cancertext</td><td></td><td>What could be more cancer than this?</td></tr>
+<tr><td>s&gt;clap</td><td></td><td>Y O U C A N D O T H I S</td></tr>
+<tr><td>s&gt;clyde</td><td></td><td>It seems that Clyde has something to say.</td></tr>
+<tr><td>s&gt;coin</td><td>flip, headsortails</td><td>Flips a coin</td></tr>
+<tr><td>s&gt;compliment</td><td>praise</td><td>Nice compliment</td></tr>
+<tr><td>s&gt;engwish</td><td>hello</td><td>Uwu</td></tr>
+<tr><td>s&gt;hoot</td><td></td><td>I have no clue what all the hoot is about.</td></tr>
+<tr><td>s&gt;insult</td><td></td><td>Generates a random insult.</td></tr>
+<tr><td>s&gt;mock</td><td></td><td>Spongebob mock meme</td></tr>
+<tr><td>s&gt;rate</td><td>rate-waifu, ratewaifu</td><td>Rate your Waifu or anyone else!</td></tr>
+<tr><td>s&gt;roast</td><td>burn</td><td>Warning, Ice not included.</td></tr>
+<tr><td>s&gt;rps</td><td></td><td>Play rock-paper-scissors with the bot.</td></tr></tbody></table></div><div class="subcategory"><h3 class="subcategory-header">Unknown</h3><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;fortune</td><td></td><td>Gets your fortune cookie.</td></tr>
+<tr><td>s&gt;trump</td><td></td><td>Fetch one of Trumps famous quotes!</td></tr>
+<tr><td>s&gt;whosthatpokemon</td><td>wtp</td><td>Whose That Pokemon? Why dont you tell me.</td></tr>
+<tr><td>s&gt;would-you-rather</td><td>wy-rather, wyr, wouldyourather, wyrather</td><td>What would you rather do?</td></tr></tbody></table></div></div><div class="category"><div class="subcategory"><h3 class="subcategory-header">The Usual</h3><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;help</td><td>commands</td><td>Display help for a command.</td></tr>
+<tr><td>s&gt;info</td><td>details, what</td><td>Provides some information about this bot.</td></tr>
+<tr><td>s&gt;invite</td><td></td><td>Displays the join guild link of the bot.</td></tr>
+<tr><td>s&gt;ping</td><td></td><td>Runs a connection test to Discord.</td></tr></tbody></table></div><div class="subcategory"><h3 class="subcategory-header">User</h3><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;avatar</td><td>avtr</td><td>Retrives a user&#039;s current avatar.</td></tr>
+<tr><td>s&gt;daily</td><td></td><td>Collect your daily points!</td></tr>
+<tr><td>s&gt;leaderboard</td><td>lb, top</td><td>COMMAND_LEADERBOARD_DESCRIPTION not found.</td></tr>
+<tr><td>s&gt;level</td><td></td><td>Check your current level.</td></tr>
+<tr><td>s&gt;profile</td><td></td><td>COMMAND_PROFILE_DESCRIPTION not found.</td></tr>
+<tr><td>s&gt;reputation</td><td>reps, giverep, givereputation, reputation, rep</td><td>COMMAND_REP_DESCRIPTION not found.</td></tr>
+<tr><td>s&gt;role</td><td></td><td>Fetches details about a specific role.</td></tr>
+<tr><td>s&gt;server</td><td>guild</td><td>Fetches details about this guild.</td></tr>
+<tr><td>s&gt;user</td><td></td><td>Fetches details about a user that I can see.</td></tr>
+<tr><td>s&gt;userconf</td><td></td><td>Define per-user settings.</td></tr>
+<tr><td>s&gt;xp</td><td>experience</td><td>Check how many points you have.</td></tr></tbody></table></div><div class="subcategory"><h3 class="subcategory-header">Utility</h3><table class="category-table"><thead>
+<tr><th>Command</th><th>Aliases</th><th>Description</th></tr>
+</thead><tbody><tr><td>s&gt;emoji</td><td></td><td>Supersize that emoji.</td></tr>
+<tr><td>s&gt;fetchmsg</td><td>content</td><td>Get the message content of a message with markdown</td></tr>
+<tr><td>s&gt;quote</td><td></td><td>Quotes a users message from said message channel or mentioned channel.</td></tr>
+<tr><td>s&gt;shards</td><td>shard</td><td>I repeat after you!</td></tr>
+<tr><td>s&gt;stats</td><td></td><td>Provides some details about the bot and stats.</td></tr>
+<tr><td>s&gt;support</td><td></td><td>Generates a link to my support server, for times when you need help.</td></tr></tbody></table></div></div>
+        </div>
+      </div>
+    </article>
+    </section>
+    <footer>
+      <script>
+        function botlists() {
+          let modal = document.createElement('div');
+          modal.classList.add('modal');
+          modal.innerHTML = '<div class="modal-background" style="z-index: -50;"></div>\
+                              <div class="modal-content" style="background-color: white; padding: 20px;">\
+                                  <p style="margin-bottom: 15px;">In order to ensure Sistine stays online, we need help to keep her public. Voting for her on public discord bot listings helps us keep her active and allow her to grow bigger in size. If you can vote for Sistine on each of the sites below, we would appreciate it greatly.</p>\
+                                  <p style="margin-bottom: 15px;"><a href="https://discordbot.world/bot/353929487018229762" target="_blank"><b>DiscordBotWorld</b></a> <br> <a href="https://discordbots.org/bot/353929487018229762" target="_blank"><b>DiscordBots.Org</b></a> <br> <a href="https://bots.discord.pw/bots/353929487018229762" target="_blank"><b>Bots.Discord</b></a> <br> <a href="https://botsfordiscord.com/bot/353929487018229762"><b>BotsForDiscord</b></a></p>\
+                                  <div></div>\
+                                  <button style="background-color: #2E4492!important" class="button colorr is-primary" onClick="this.parentNode.parentNode.classList.remove(\'is-active\');">Close</button>\
+                              </div>';
+          modal.classList.add('is-active');
+          document.body.appendChild(modal);
+
+        }
+      </script>
+
+      <div class="centered clearfix">
+        <div class="footer-logo">
+          <p style="font-family: Buffalo; font-size: 375%">Sistine Fibel</p>
+
+        </div>
+        <div class="footer-navigation">
+          <div class="footer-links-holder">
+            <h3>IMPORTANT LINKS</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/terms">Terms of Service & Privacy</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/6rJsFrv">Support Guild</a>
+              </li>
+              <li>
+                <a href="https://klasa.js.org">Get Started with Klasa!</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links-holder">
+            <h3>PARTNERS</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="https://discordbots.org/bot/pengubot">PenguBot</a>
+              </li>
+              <li>
+                <a href="https://discordbots.org/bot/331366307872243714">ApexBot</a>
+              </li>
+              <li>
+                <a href='https://discordbots.org/bot/341124681211969539'>ExcelledBot</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-links-holder">
+            <h3>EXTRAS</h3>
+            <ul class="footer-links">
+              <li>
+                <span>
+                  <span>Random Switch</span>
+                  <label class="dThemeSwitch">
+                    <input id="darkThemeEnabler" type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p class="disclaimer">Use of this Web site constitutes acceptance of the Terms and Conditions and Privacy Policy. All copyrights, trademarks,
+          service marks belong to the corresponding owners.</p>
+      </div>
+    </footer>
+</body>
+
+</html>

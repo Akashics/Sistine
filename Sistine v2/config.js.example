@@ -1,0 +1,30 @@
+module.exports = {
+	token: '',
+	weebservices: '',
+	geniuskey: '',
+	idioticapi: '',
+	dsn: 'https://@sentry.io', 
+	cheweyapi: '',
+	googleapi: '',
+	discordbots: '',
+	dblauth: '',
+
+	fetchHeaders: {
+		'User-Agent': 'Sistine v2'
+	},
+
+	nodes: [
+		{ host: '127.0.0.1', port: 2333, password: 'lavalinkpassword' }
+	],
+
+	dashboard: {
+		secret: '',
+		id: ''
+	},
+	spotify: {
+		id: '',
+		secret: '',
+		token: ''
+	}
+
+};

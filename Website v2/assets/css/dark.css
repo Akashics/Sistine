@@ -1,0 +1,216 @@
+article, body, html{
+    background:none !important;
+}
+html{
+    background:#2a2d32 !important;
+}
+footer{
+    color:white;
+}
+
+.table {
+    border-width: 2px;
+}
+
+#commands {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.category {
+    padding-top:25px;
+}
+
+.shapes-background{
+    filter:invert(1) grayscale();
+    transform:scale(1.1) !important;
+    z-index:-1;
+}
+
+.bot-card .content{
+    background:#27292e !important;
+    box-shadow:0px 0px 8px -2px rgba(0,0,0,0.6) !important;
+    opacity:0.9;
+}
+.bot-card:hover .content{
+    background:#24262b !important;
+    box-shadow:0px 4px 8px -2px rgba(0,0,0,0.6) !important;
+    opacity:1;
+}
+.bot-list-section .bot-img {
+    background:#090909;
+    box-shadow:none !important;
+    border:none !important;
+}
+.tooltip{
+    filter:invert(1);
+}
+.blog_card {
+    background:#222428;
+    color:white;
+    border:1px solid #353535;
+}
+.blog_card:hover {
+    background:#222428;
+    color:white;
+}
+.blog_card:after{
+    background:#0e0e0e !important;
+}
+
+.blog_card:hover:after{
+    background:#0e0e0e !important;
+}
+.bot-list-section .bot-name {
+    color:white;
+    font-size:1.2em;
+}
+.bot-list-section .bot-description {
+    color:rgba(255,255,255,0.7);
+}
+.bot-list-section .btn-like {
+    color:white;
+    border:1px solid #3c435d;
+}
+.bot-list-section .lib {
+    color:#687dc6;
+}
+.bot-card div .bot-btns .btn{
+    color:#7187dd !important;
+}
+#home-page .section-title h4 {
+    color:white;
+}
+#home-page .section-title p {
+    color:#7f8083;
+}
+.exploremorebots .tagbutton {
+    color:white;
+}
+#wrapperrr {
+    background:#262626;
+    box-shadow:0px 0px 0px 2px#7f8083;
+}
+.tagbutton {
+    color:white;
+}
+
+
+.bot-card .partnered{
+    background:#312538 !important;
+}
+
+.bot-card:hover .partnered{
+    background:#2a1d33 !important;
+}
+.partnered .bot-name {
+    color:gold;
+}
+.partnered .bot-description {
+    color:white !important;
+}
+.bot-card .partnered .bot-btns .btn:hover{
+    background:#3e1f54;
+    color:#e7c302 !important;
+}
+.bottom-bar {
+    background:#677bc8 !important;
+}
+
+footer a:hover{
+    color:#ceac9e;
+}
+.maincon .content {
+    background:#222428;
+    color:rgba(255,255,255,0.8);
+}
+.content h2 {
+    color:white !important;
+}
+.input {
+    background:#34363a !important;
+    border:1px solid #2a2d32 !important;
+    color:white !important;
+}
+.taginput {
+    background:none;
+    color:white;
+}
+.suggestedtags{
+    background:#2a2d32;
+}
+.suggestedtags p:hover{
+    background:rgba(0,0,0,0.1);
+}
+.atag {
+    background:#34363a;
+}
+.atag:after{
+    border-left-color:#34363a;
+}
+.atag:before{
+    background:#222428;
+}
+.content select {
+    color:white;
+    background:#34363a;
+}
+footer {
+    background:#262626;
+}
+.bottom-bar {
+    background:black !important;
+}
+.label {
+    color:white !important;
+}
+.control .checkbox:hover{
+    color:#9790a2 !important;
+}
+.control .checkbox strong {
+    color:red !important;
+}
+header {
+    background:no-repeat center center / cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-image: linear-gradient(
+        rgba(47, 79, 79, 0.45), 
+        rgba(47, 79, 79, 0.45)
+      ), url('https://image.tmdb.org/t/p/original/1kmEvsqYnxA7fy6vtpAmy1Qo9Gu.jpg') !important;
+}
+#menu {
+    background:#1d1f21 !important;
+}
+#menu .menu ul li a:hover, #menu .menu ul li span:hover{
+    background:#35373b;
+}
+
+#menu ul li a:not(.btn) {
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+#menu {
+background: transparent !important;
+
+.content .textarea {     background:#34363a !important;     color:white !important;     border:1px solid black !important; } 
+.content select {     background:#34363a !important;     color:white !important;     border:1px solid black !important; } 
+.maincon .button {     filter:invert(1) !important; }
+
+#bot-details-page .bot-name{
+    color:gainsboro !important;
+}
+#createdby {
+    color:grey !important;
+}
+.content a:hover{
+    color:#334dad !important;
+}
+
+.darkthemeee h1 {
+    color: white!important;
+}
+
+.darkthemeee h4 {
+    color: white!important;
+}

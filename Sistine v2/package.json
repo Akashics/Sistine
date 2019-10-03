@@ -1,0 +1,31 @@
+{
+  "name": "miku",
+  "version": "1.0.0",
+  "description": "A Discord Bot",
+  "main": "src/index.js",
+  "author": "Kashall#0001",
+  "license": "unlicensed",
+  "private": true,
+  "dependencies": {
+    "@sentry/node": "5.5.0",
+    "canvas": "^2.5.0",
+    "canvas-constructor": "^3.0.1",
+    "cheerio": "^1.0.0-rc.2",
+    "cli-table-redemption": "^1.0.1",
+    "discord.js": "discordjs/discord.js",
+    "discord.js-lavalink": "^2.2.2",
+    "erlpack": "discordapp/erlpack",
+    "fast-html-parser": "^1.0.1",
+    "figlet": "^1.2.1",
+    "idiotic-api": "^0.2.11",
+    "klasa": "github:dirigeants/klasa#master",
+    "klasa-dashboard-hooks": "dirigeants/klasa-dashboard-hooks",
+    "klasa-member-gateway": "dirigeants/klasa-member-gateway",
+    "kurasuta": "^0.2.17",
+    "mongodb": "^3.2.7",
+    "node-dogstatsd": "^0.0.7",
+    "node-fetch": "^2.3.0",
+    "rethinkdb-ts": "^2.4.0-rc.15"
+  },
+  "devDependencies": {}
+}
