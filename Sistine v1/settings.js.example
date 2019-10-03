@@ -1,0 +1,77 @@
+const settings = {
+	// The user id of who the bot token belongs to. Needed for Authorization.
+	ownerID: 'YOUR USER ID',
+
+	// Bot Developers by UserID, Permission Level 9.
+	developers: ['ANYONE WHO IS A DEVELOPER + YOURS'],
+
+	// Support Agents by UserID, Permission Level 8.
+	supportAgents: ['SAME AS DEVELOPERS],
+
+	// Is this bot supporting Patreons?
+	patreon: false,
+
+	// Your Bot's Token. Available on https://discordapp.com/developers/applications/me
+	token: 'A RANDOM TOKEN? MAYBE.',
+
+	// Webhook ID and Secret for Bot Logging. Handy if using sharding.
+	// Ex: https://discordapp.com/api/webhooks/YOUR_ID_HERE/YOUR_SECRET_HERE
+	webhook: {
+		id: 'TOKEN ID',
+		secret: 'YOUR_SECRET_HERE'
+	},
+
+	lavalink: {
+		restnode: {
+			url: 'http://0.0.0.0:5656',
+			password: 'YOUR NODE PASSWORD'
+		},
+		nodes: [
+			{
+				host: '0.0.0.0',
+				port: 5657,
+				region: 'us',
+				password: 'YOUR NODE PASSWORD'
+			}
+		]
+	},
+
+	rethinkdb: {
+		host: 'localhost',
+		port: 28015,
+		username: 'admin',
+		password: '',
+		database: 'test'
+	},
+
+	// Dashboard Values, Required to run the API and Dashboard.`
+	dashboard: {
+		clientID: 'YOUR BOTS CLIENT ID',
+		clientSecret: 'YOUR BOTS CLIENT SECRET, USED FOR OAUTH',
+		callbackURL: 'YOUR CALLBACK URL',
+		apiURL: 'THE API URL TO YOUR BOT',
+		sessionSecret: 'A RANDOM 256 BIT ENCRYPTED KEY',
+		domain: 'YOUR DOMAIN NAME.com',
+		port: 8080
+	},
+
+	apiTokens: {
+		// DiscordBots.co.uk API Key, formerly ls.terminal.ink, available at: https://discordbots.co.uk
+		discordbotscouk: '',
+		// Discord Bots.org API key, requires an active bot, available at: https://discordbots.org/
+		discordbotsorg: '',
+		// DiscordBotWorld API Key, available at: https://discordbot.world/
+		discordbotworld: '',
+		// Google API key available at: https://console.developers.google.com/apis/credentials
+		googleapi: '',
+		// IdioticAPI key is available by request from York: https://discord.gg/PgCR8Rg
+		idioticapi: '',
+		// WeebService key is available by request to Wolke#0001 (128392910574977024)
+		weebservices: ''
+
+	}
+
+
+};
+
+module.exports = settings;

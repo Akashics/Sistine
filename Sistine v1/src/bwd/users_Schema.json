@@ -1,0 +1,57 @@
+{
+    "type": "Folder",
+    "balance": {
+        "type": "integer",
+        "array": false,
+        "default": 1000,
+        "min": 0,
+        "max": null,
+        "sql": "INTEGER DEFAULT 0",
+        "configurable": false
+    },
+    "reputation": {
+        "type": "integer",
+        "array": false,
+        "default": 0,
+        "min": 0,
+        "max": null,
+        "sql": "INTEGER DEFAULT 0",
+        "configurable": false
+    },
+    "level": {
+        "type": "integer",
+        "array": false,
+        "default": 1,
+        "min": 1,
+        "max": null,
+        "sql": "INTEGER DEFAULT 1",
+        "configurable": false
+    },
+    "dailyTimer": {
+        "type": "integer",
+        "array": false,
+        "default": 1504120109,
+        "min": 1504120109,
+        "max": null,
+        "sql": "INTEGER DEFAULT 1504120109",
+        "configurable": false
+    },
+    "reputationTimer": {
+        "type": "integer",
+        "array": false,
+        "default": 1504120109,
+        "min": 1504120109,
+        "max": null,
+        "sql": "INTEGER DEFAULT 1504120109",
+        "configurable": false
+    },
+    "experience": {
+        "type": "integer",
+        "array": false,
+        "default": 0,
+        "min": 0,
+        "max": null,
+        "sql": "INTEGER DEFAULT 0",
+        "configurable": false
+    }
+}
